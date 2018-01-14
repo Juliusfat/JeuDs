@@ -15,6 +15,8 @@ public class ActivityDice extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dice2);
 
+        // récupération de l'info de l'activité principale
+
         max = getIntent().getIntExtra("max",0);
         TextView textdes = findViewById(R.id.textTitle);
         textdes.setText("Dés à " + max + " Faces ");
@@ -27,7 +29,7 @@ public class ActivityDice extends AppCompatActivity {
 
     public void onGoDice(View V) {
 
-        //setContentView(R.layout.activity_dice2);
+        //création d'un nombre aléatoire
 
         SecureRandom random = new SecureRandom();
         int result = random.nextInt(max) + 1;

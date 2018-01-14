@@ -14,7 +14,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //chargement de la vue
+
         setContentView(R.layout.activity_main);
+
+        // Initialisation du premier bouton
 
         Button button6 = findViewById(R.id.button6);
         button6.setOnClickListener(new View.OnClickListener() {
@@ -22,7 +27,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent FormIntent = new Intent(MainActivity.this, ActivityDice.class);
+
+                // transmission de l'info saisie vers la deuxieme activity
+
                 FormIntent.putExtra("max", 6);
+
+                //lancement de l'activity
+
                 startActivity(FormIntent);
             }
         });
